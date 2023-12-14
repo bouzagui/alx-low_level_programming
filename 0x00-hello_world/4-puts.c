@@ -8,7 +8,6 @@
 int main(void)
 {
 	char *happy = ("\"Programming is like building a multilingual puzzle");
-
 	puts(happy);
 	return (0);
 }
