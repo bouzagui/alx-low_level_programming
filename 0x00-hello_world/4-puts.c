@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-/*
- * main - Print string with puts function.
- *
- * Return: Always 0 (success)
-*/
+/**
+ * main - A program that prints a line puts function
+ * Return: 0 (Success)
+ */
+
 int main(void)
 {
 	char *happy = ("\"Programming is like building a multilingual puzzle");
