@@ -3,6 +3,8 @@
 /**
  * main - Entry point.
  * Descriction: function to be print alphabet lowercase and uppercase
+ *
+ * Return: Always 0.
 */
 int main(void)
 {
@@ -20,6 +22,5 @@ int main(void)
 		alpu++;
 	}
 	putchar('\n');
-
 	return (0);
 }
