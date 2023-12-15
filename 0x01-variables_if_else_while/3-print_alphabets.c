@@ -22,5 +22,6 @@ int main(void)
 		alpu++;
 	}
 	putchar('\n');
+
 	return (0);
 }
