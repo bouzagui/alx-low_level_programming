@@ -15,7 +15,7 @@ int main(void)
         {
             putchar(i + '0');
             putchar(j + '0');
-            //Check the last digits to finish printing the Comma.
+            // Check the last digits to finish printing the Comma.
             if (i != 8 || j != 9)
             {
                 putchar(' ');
