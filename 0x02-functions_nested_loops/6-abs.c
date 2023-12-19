@@ -4,10 +4,17 @@
 /**
  * _abs - computes the absolute value of an integer.
  * @i: The integer to be computed.
- * 
+ *
  * Return: The absolute value of an integer.
 */
-int _abs(int i)
+int _abs(int ing)
 {
-    int abs_i = _abs(i);
+    if (ing >= 0)
+	{
+		return (ing);
+	}
+	else
+	{
+		return (-ing);
+	}
 }
