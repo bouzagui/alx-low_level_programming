@@ -5,15 +5,15 @@
  *
  * Return: Value of the last digit.
  */
-int print_last_digit(int num)
+int print_last_digit(int n)
 {
 	int i;
 
-	if (num < 0)
+	if (n < 0)
 	{
-		num *= -1;
+		n *= -1;
 	}
-	i = num % 10;
+	i = n % 10;
 
 	_putchar(i + '0');
 	return (i);
