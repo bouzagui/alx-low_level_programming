@@ -3,7 +3,7 @@
 /**
  * print_diagonal - function to be printed diagonal.
  * @n: number of diagonals
- * 
+ *
  * Return: nothing.
 */
 void print_diagonal(int n)
