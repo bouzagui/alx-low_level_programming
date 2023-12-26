@@ -7,16 +7,17 @@
  */
 int main(void)
 {
-	long i;
+	long i, result;
 	long n = 612852475143;
 
-	for (i = 3; i < 250; i += 2)
+	for (i = 3; i < 782890; i += 2)
 	{
-		if (n % i == 0)
+		while (n % i == 0)
 		{
 			n /= i;
+			result = n;
 		}
 	}
-	printf("%lu\n", n);
+	printf("%ld\n", result);
 	return (0);
 }
