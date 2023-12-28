@@ -10,6 +10,7 @@ int multiplication(void)
 {
 	int sum = 0;
 	int i = 0;
+
 	while (i < 1024)
 	{
 		if (i % 3 == 0 || i % 5 == 0)
@@ -28,6 +29,7 @@ int multiplication(void)
 int main(void)
 {
 	int i;
+
 	i = multiplication();
 	printf("%d\n", i);
 	return (0);
