@@ -7,26 +7,26 @@
 */
 int main(void)
 {
-	long a = 0, b = 1, sum = 0;
 	int i = 0;
+	unsigned long a = 0, b = 1, sum;
 
-	while (i <= 49)
+	while (i < 50)
 	{
-			sum = a + b;
-			printf("%lu", b);
+		sum = a + b;
+		a = b;
+		b = sum;
 
-			a = b;
-			b = sum;
+		printf("%lu", b);
 
-			if (i == 49)
-			{
-				printf("\n");
-			}
-			else
-			{
-				printf(", ");
-			}
-			i++;
+		if (i == 49)
+		{
+			printf("\n");
+		}
+		else
+		{
+			printf(", ");
+		}
+		i++;
 	}
 	return (0);
 }
