@@ -11,13 +11,9 @@ int main(void)
             b = sum;
             printf("%lu", b);
             if (b == 49)
-            {
                 printf("\n");
-            }
             else
-            {
                 printf(", ");
-            }
     }
     printf("\n");
 }
