@@ -7,9 +7,10 @@
 */
 int main(void)
 {
-	long i, a = 0, b = 1, sum = 0;
+	long a = 0, b = 1, sum = 0;
+	int i = 0;
 
-	for (i = 0; i < 50; i++)
+	while (i < 50)
 	{
 			sum = a + b;
 			a = b;
@@ -24,6 +25,7 @@ int main(void)
 			{
 				printf(", ");
 			}
+			i++;
 	}
 	return (0);
 }
