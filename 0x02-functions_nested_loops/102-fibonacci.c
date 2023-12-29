@@ -13,9 +13,10 @@ int main(void)
 	while (i <= 49)
 	{
 			sum = a + b;
+			printf("%lu", b);
+
 			a = b;
 			b = sum;
-			printf("%lu", b);
 
 			if (i == 49)
 			{
