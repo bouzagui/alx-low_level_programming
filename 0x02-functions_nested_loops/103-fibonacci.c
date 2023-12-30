@@ -22,5 +22,5 @@ int main(void)
 		fic2 = count;
 	}
 	printf("%u\n", sum);
-    return (0);
+	return (0);
 }
