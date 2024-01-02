@@ -4,7 +4,7 @@
 /**
  * reset_to_98 - Updated a pointer 'n' to 98.
  * @n: Number of pointer.
- * Return: Nothing. 
+ * Return: Nothing.
 */
 void reset_to_98(int *n)
 {
