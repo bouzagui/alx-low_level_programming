@@ -1,28 +1,16 @@
 #include "main.h"
+#include <stdio.h>
 #include <string.h>
-
+/**
+ * _puts - puts a string.
+ * @str: the string to put
+ * Return: nothing.
+*/
 void _puts(char *str)
 {
-    int i;
-    size_t length = strlen(str);
-
-    for (i = 0; i < length; i++)
-    {
-        _putchar(str[i]);
-    }
-    _putchar('\n');
-}
-
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    char *str;
-
-    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-    _puts(str);
-    return (0);
+	while (*str)
+	{
+		_putchar(*str++);
+	}
+	_putchar('\n');
 }
