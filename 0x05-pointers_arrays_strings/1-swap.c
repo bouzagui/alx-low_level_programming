@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * swap_int - Function to be printed swaps the values
  * @a: First value.
