@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <string.h>
 /**
  * _puts - puts a string.
  * @str: the string to put
@@ -8,9 +7,12 @@
 */
 void _puts(char *str)
 {
-	while (*str)
+	int i = 0;
+
+	while (str[i] != '\0')
 	{
-		_putchar(*str++);
+		_putchar(*(str + i));
+		i++;
 	}
 	_putchar('\n');
 }
