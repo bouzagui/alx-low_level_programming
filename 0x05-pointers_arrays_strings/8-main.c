@@ -1,19 +1,22 @@
 #include "main.h"
-
 /**
- * main - check the code for
- *
- * Return: Always 0.
+ * _strcpy - copies the string pointed to by src
+ * including the terminating null byte (\0)
+ * to the buffer pointed to by dest
+ * @dest: pointer to the buffer in which we copy the string
+ * @src: string to copy
+ * Return: pointer to dest
  */
-int main(void)
+char *_strcpy(char *dest, char *src)
 {
-    int array[5];
+	int i;
 
-    array[0] = 98;
-    array[1] = 402;
-    array[2] = -198;
-    array[3] = 298;
-    array[4] = -1024;
-    print_array(array, 5);
-    return (0);
+	for (i = 0; src[i];)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+
+	return (dest);
 }
