@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -7,18 +6,23 @@
  * @src: source string.
  * Return: destination string.
 */
-
 char *_strcat(char *dest, char *src)
 {
-	int i, count = 0;
+	int o = 0;
+	int i = 0;
 
-	for (i = 0; dest[i] != '\0'; i++)
+	while (dest[o] != '\0')
 	{
+		o++;
 	}
-	while (src[count] != '\0')
+
+	while (src[i] != '\0')
 	{
-		count++;
+		dest[o] = src[i];
+		o++;
+		i++;
 	}
-	dest[i] = '\0';
+	dest[o] = '\0';
+
 	return (dest);
 }
