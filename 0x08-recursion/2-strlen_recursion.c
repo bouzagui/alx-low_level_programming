@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -17,6 +16,6 @@ int _strlen_recursion(char *s)
 	{
 		len = _strlen_recursion(s + 1);
 		len++;
-		return (len);
 	}
+    return (len);
 }
