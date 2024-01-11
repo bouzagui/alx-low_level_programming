@@ -1,19 +1,4 @@
 #include "main.h"
-
-int actual_sqrt_recursion(int n, int index);
-
-/**
- * _sqrt_recursion - Recursive helper function to calculate
- * @n: The number for which the square root is calculated
- *
- * Return: The resulting square root, or -1 if n is negative
- */
-int _sqrt_recursion(int n)
-{
-	if (n < 0)
-		return (-1);
-	return (actual_sqrt_recursion(n, 0));
-}
 /**
  * actual_sqrt_recursion - Recursively finds the square root of a number
  * @n: The number to calculate the square root of
@@ -33,4 +18,17 @@ int actual_sqrt_recursion(int n, int index)
 		return (-1);
 	}
 	return (actual_sqrt_recursion(n, index + 1));
+}
+
+/**
+ * _sqrt_recursion - Recursive helper function to calculate
+ * @n: The number for which the square root is calculated
+ *
+ * Return: The resulting square root, or -1 if n is negative
+ */
+int _sqrt_recursion(int n)
+{
+	if (n < 0)
+		return (-1);
+	return (actual_sqrt_recursion(n, 0));
 }
