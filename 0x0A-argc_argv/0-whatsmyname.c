@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main - printed the name of the file
- * @argc: number of arguments
- * @argv: arguments.
+ * main - Enter point.
+ * @argc: Number of arguments
+ * @argv: Array of arguments.
  * Retrun: Always 0 (success)
 */
 int main(int argc, char **argv)
