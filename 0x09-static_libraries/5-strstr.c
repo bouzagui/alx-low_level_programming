@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stddef.h>
+
 /**
  * _strstr - String representation of a string value.
  * @haystack: The stack of stack elements.
