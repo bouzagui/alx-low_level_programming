@@ -1,6 +1,11 @@
 #include "main.h"
 #include <string.h>
 
+/**
+ * _strdup - duplicate string
+ * @str: string to copy.
+ * Return: string with duplicate characters
+*/
 char *_strdup(char *str)
 {
     char *ptr;
