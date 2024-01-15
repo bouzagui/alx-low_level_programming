@@ -4,12 +4,22 @@
 char *str_concat(char *s1, char *s2)
 {
     char *ptr;
-    size_t str1 = strlen(s1);
-    size_t str2 = strlen(s2);
+    size_t str1;
+    size_t str2;
 
-    if (str1 == NULL || str2 == NULL)
+    if (s1 != NULL)
     {
-        return NULL;
+        while (strlen(s1) > 0)
+        {
+            s1++;
+        }
+    }
+    if (s2 != NULL)
+    {
+        while (strlen(s2) > 0)
+        {
+            s2++;
+        }
     }
 
     ptr = malloc((str1 + str2 + 1) * sizeof(char));
