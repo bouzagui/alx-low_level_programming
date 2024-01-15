@@ -13,6 +13,6 @@ char *str_concat(char *s1, char *s2)
         exit(0);
     }
     strcpy(ptr, s1);
-    strcpy(ptr, s2);
+    strcat(ptr, s2);
     return (ptr);
 }
