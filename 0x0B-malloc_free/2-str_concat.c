@@ -4,12 +4,22 @@
 char *str_concat(char *s1, char *s2)
 {
     char *ptr;
-    size_t len1, len2;
-    size_t index = 0;
+    int len1, len2;
+    int index = 0;
 
     if (s1 != NULL)
     {
-        len1 = strlen(s1);
+        while (s1[len1] != '\0')
+        {
+            len1++;
+        }
+    }
+    if (s2 != NULL)
+    {
+        while (s2[len2] != '\0')
+        {
+            len2++;
+        }
     }
     if (s2 != NULL)
     {
