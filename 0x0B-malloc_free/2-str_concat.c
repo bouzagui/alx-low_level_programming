@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * _str_concat - Concatenate a string with another string.
