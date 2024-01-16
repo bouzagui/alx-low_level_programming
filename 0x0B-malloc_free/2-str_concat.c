@@ -4,30 +4,34 @@
 char *str_concat(char *s1, char *s2)
 {
     char *ptr;
-    size_t str1;
-    size_t str2;
+    size_t len1, len2;
+    size_t index = 0;
 
     if (s1 != NULL)
     {
-        while (strlen(s1) > 0)
-        {
-            s1++;
-        }
+        len1 = strlen(s1);
     }
     if (s2 != NULL)
     {
-        while (strlen(s2) > 0)
-        {
-            s2++;
-        }
+        len2 = strlen(s2);
     }
 
-    ptr = malloc((str1 + str2 + 1) * sizeof(char));
+    ptr = malloc(sizeof(char) * (len1 + len2 + 1));
     if (ptr == NULL)
     {
         exit(0);
     }
-    strcpy(ptr, s1);
-    strcat(ptr, s2);
+    while (index < len1)
+    {
+        ptr[index] = s1[index];
+        index++;
+    }
+    index = 0;
+    while (index < len2)
+    {
+        ptr[len1 + index] = s2[index];
+        index++;
+    }
+    ptr[len1 + len2] = '\0';
     return (ptr);
 }
