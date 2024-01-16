@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _str_concat - Concatenate a string with another string.
+ * str_concat - Concatenate a string with another string.
  * @s1: the first string to concatenate.
  * @s2: the second string to concatenate.
  * Return: the concatenated string.
