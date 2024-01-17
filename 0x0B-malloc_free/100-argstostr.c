@@ -38,10 +38,7 @@ char *argstostr(int ac, char **av)
 		{
 			ptr[c++] = av[i][j++];
 		}
-        if (i < ac - 1)
-        {
-		    ptr[c++] = '\n';
-        }
+		ptr[c++] = '\n';
         i++;
 	}
 	ptr[c] = '\0';
