@@ -26,7 +26,7 @@ int count_word(char *s)
 			a = 1;
 			num++;
 		}
-    }
+	}
 	return (num);
 }
 
