@@ -60,7 +60,6 @@ void *realloc_expand(void *ptr, unsigned int size)
 
 	if (size == 0)
 	{
-		free(ptr);
 		return (NULL);
 	}
 
