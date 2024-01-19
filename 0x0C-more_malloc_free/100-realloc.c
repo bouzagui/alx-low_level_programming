@@ -35,7 +35,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	if (index == NULL)
 	{
-		return (NULL);
+		exit(0);
 	}
 	a = 0;
 	while (a < old_size)
@@ -44,7 +44,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		a++;
 	}
 
-	free(ptr);
 	return (index);
 }
 
@@ -71,7 +70,7 @@ void *realloc_expand(void *ptr, unsigned int size)
 
 	if (index == NULL)
 	{
-		return (NULL);
+		exit(0);
 	}
 	b = 0;
 	while (b < size)
