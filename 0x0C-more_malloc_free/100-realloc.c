@@ -75,6 +75,6 @@ void *realloc_expand(void *ptr, unsigned int size)
 	{
 		index[b] = p[b];
 	}
-	free(index);
+	free(p);
 	return (index);
 }
