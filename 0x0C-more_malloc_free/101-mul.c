@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
  * is_digit - Checks if a string contains only digits
@@ -15,7 +16,13 @@ int is_digit(char c)
 
 void error_and_exit(void)
 {
-	printf("Error\n");
+	int i;
+	char error[] = "Error\n";
+
+	for (i = 0; error[i]; i++)
+    {
+		_putchar(error[i]);
+    }
 	exit(98);
 }
 
@@ -27,7 +34,10 @@ void error_and_exit(void)
  */
 void multiply(char *num1, char *num2)
 {
-	int len1 = 0, len2 = 0;
+	int len1 = 0, len2 = 0, result_len;
+    int i, j, b, carry, n1, n2;
+    int temp, leading_zeros;
+    int *result;
 
 	while (num1[len1] || num2[len2])
 	{
@@ -39,31 +49,39 @@ void multiply(char *num1, char *num2)
 		len2++;
 	}
 
-	int result_len = len1 + len2;
-	int *result = calloc(result_len, sizeof(int));
+	result_len = len1 + len2;
+	*result = calloc(result_len, sizeof(int));
 
-	for (int i = len1 - 1; i >= 0; i--)
+    if (result == NULL)
+    {
+        exit(0);
+    }
+
+	for (i = len1 - 1; i >= 0; i--)
 	{
-		int carry = 0;
-		int n1 = num1[i] - '0';
+		carry = 0;
+		n1 = num1[i] - '0';
 
-		for (int j = len2 - 1; j >= 0; j--)
-			int n2 = num2[j] - '0';
-			int temp = n1 * n2 + result[i + j + 1] + carry;
+		for (j = len2 - 1; j >= 0; j--)
+        {
+			n2 = num2[j] - '0';
+			temp = n1 * n2 + result[i + j + 1] + carry;
 
 			result[i + j + 1] = temp % 10;
 			carry = temp / 10;
+        }
 
 		result[i] += carry;
 	}
-	int leading_zeros = 0;
+	leading_zeros = 0;
 
 	while (leading_zeros < result_len - 1 && result[leading_zeros] == 0)
 		leading_zeros++;
 
-	for (int i = leading_zeros; i < result_len; i++)
-		printf("%d", result[i]);
-	printf("\n");
+	for (b = leading_zeros; b < result_len; b++)
+		_putchar(result[b] + '0');
+
+	_putchar('\n');
 
 	free(result);
 }
