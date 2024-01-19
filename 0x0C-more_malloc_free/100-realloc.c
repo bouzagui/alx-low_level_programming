@@ -37,11 +37,9 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	{
 		exit(0);
 	}
-	a = 0;
-	while (a < old_size)
+	for (a = 0; a < old_size; a++)
 	{
 		index[a] = p[a];
-		a++;
 	}
 
 	free(ptr);
@@ -73,11 +71,10 @@ void *realloc_expand(void *ptr, unsigned int size)
 	{
 		exit(0);
 	}
-	b = 0;
-	while (b < size)
+
+	for (b = 0; b < size; b++)
 	{
 		index[b] = p[b];
-		b++;
 	}
 
 	return (index);
