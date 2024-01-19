@@ -44,6 +44,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		a++;
 	}
 
+	free(ptr);
 	return (index);
 }
 
@@ -79,6 +80,5 @@ void *realloc_expand(void *ptr, unsigned int size)
 		b++;
 	}
 
-	free(ptr);
 	return (index);
 }
