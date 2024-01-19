@@ -49,13 +49,13 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 }
 
 /**
- * _realloc_expand - Reallocates memory when new_size is less than old_size
+ * realloc_expand - Reallocates memory when new_size is less than old_size
  * @ptr: Pointer to the previously allocated memory
- * @new_size: The size of the new memory block
+ * @size: The size of the new memory block
  *
  * Return: A pointer to the reallocated memory block, or NULL on failure.
  */
-void *_realloc_expand(void *ptr, unsigned int size)
+void *realloc_expand(void *ptr, unsigned int size)
 {
 	char *index, *p;
 	unsigned int b;
