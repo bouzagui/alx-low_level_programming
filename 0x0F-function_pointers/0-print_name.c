@@ -2,7 +2,7 @@
 /**
  * print_name - function name for printing
  * @name: name of function.
- * @f:
+ * @f: function pointer.
 */
 void print_name(char *name, void (*f)(char *))
 {
@@ -10,8 +10,5 @@ void print_name(char *name, void (*f)(char *))
 	{
 		exit(0);
 	}
-	else
-	{
-		f(name);
-	}
+	f(name);
 }
