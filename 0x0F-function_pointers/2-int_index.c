@@ -6,14 +6,14 @@ int int_index(int *array, int size, int (*cmp)(int))
 
     if (array == NULL && cmp == NULL)
     {
-        exit(-1);
+        return (-1);
     }
     if (size <= 0)
     {
-        exit(-1);
+        return (-1);
     }
     i = 0;
-    while (i < (int)size && size > 0)
+    while (i < (int)size)
     {
         if (cmp(array[i]) != 0)
         {
