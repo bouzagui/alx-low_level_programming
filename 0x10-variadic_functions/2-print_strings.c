@@ -1,6 +1,10 @@
 #include "variadic_functions.h"
 #include <stdio.h>
-
+/**
+ * print_strings - function to be printed two strings.
+ * @separator: string to be printed.
+ * @n: number of strings to print.
+*/
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
@@ -10,10 +14,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_start(arg, n);
 	for (i = 1; i <= n; i++)
 	{
-        str = va_arg(arg, char*);
+		str = va_arg(arg, char*);
 		if (str == NULL)
 		{
-        	printf("(nil)");
+			printf("(nil)");
 		}
 		else
 		{
