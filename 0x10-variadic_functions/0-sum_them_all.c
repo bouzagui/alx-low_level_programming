@@ -1,6 +1,6 @@
 #include "variadic_functions.h"
 /**
- * sum_them_all - sum them all numbers from one to another using the sum function.
+ * sum_them_all - sum them all numbers from one.
  * @n: numbers to sum together.
  * Return: sum of all numbers.
 */
