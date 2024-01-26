@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 	va_list args;
 
 	va_start(args, format);
-	for (i = 0; format != NULL && format[i] != '\0'; i++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		switch (format[i])
 		{
@@ -21,7 +21,7 @@ void print_all(const char * const format, ...)
 					separator = 0;
 					break;
 			case 'i':
-					printf("%i", va_arg(args, int));
+					printf("%d", va_arg(args, int));
 					separator = 0;
 					break;
 			case 'f':
@@ -32,7 +32,8 @@ void print_all(const char * const format, ...)
 					str = va_arg(args, char*);
 					if (str == NULL)
 						printf("(nil)");
-					printf("%s", str);
+                    else
+					    printf("%s", str);
 					separator = 0;
 					break;
 			default:
@@ -42,6 +43,6 @@ void print_all(const char * const format, ...)
 		if (format[i + 1] != '\0' && separator == 0)
 			printf(", ");
 	}
+    printf("\n");
 	va_end(args);
-	printf("\n");
 }
