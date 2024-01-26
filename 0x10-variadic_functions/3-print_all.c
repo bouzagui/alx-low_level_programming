@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 	va_list args;
 
 	va_start(args, format);
-	for (i = 0; format[i] != '\0'; i++)
+	for (i = 0; format != NULL && format[i] != '\0'; i++)
 	{
 		switch (format[i])
 		{
