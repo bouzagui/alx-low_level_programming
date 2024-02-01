@@ -7,21 +7,21 @@
 */
 size_t print_list(const list_t *h)
 {
-	size_t count;
+	size_t count = 0;
+	const list_t *corr = h;
 
-	count = 0;
-	while (h != NULL)
+	while (corr != NULL)
 	{
-		if (h->str != NULL)
+		if (corr->str != NULL)
 		{
-			printf("[%i] %s\n", h->len, h->str);
+			printf("[%i] %s\n", corr->len, corr->str);
 		}
 		else
 		{
 			printf("[0] (nil)\n");
 		}
 		count++;
-		h = h->next;
+		corr = corr->next;
 	}
 	return (count);
 }
