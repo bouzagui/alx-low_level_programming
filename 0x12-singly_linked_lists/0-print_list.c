@@ -11,15 +11,15 @@ size_t print_list(const list_t *h)
 	const list_t *corr = h;
 
 	count = 0;
-	while (corr != NULL)
+	while (corr == NULL)
 	{
-		if (corr->str == NULL)
+		if (corr->str != NULL)
 		{
-			printf("[0] (nil)\n");
+			printf("[%i] %s\n", corr->len, corr->str);
 		}
 		else
 		{
-			printf("[%i] %s\n", corr->len, corr->str);
+			printf("[0] (nil)\n");
 		}
 		count++;
 		corr = corr->next;
