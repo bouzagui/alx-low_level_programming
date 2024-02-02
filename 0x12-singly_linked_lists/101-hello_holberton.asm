@@ -1,9 +1,9 @@
 section .data
-	hello_school db 'Hello, Holberton', 0
+	hello_school db 'Hello, Holberton', 10, 0
 
 section .text
-	extern printf
 	global main
+	extern printf
 
 main:
 	sub rsp, 8
