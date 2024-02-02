@@ -6,10 +6,10 @@ section .text
 	extern printf
 
 main:
-	sub rsp, 8
+	sub rsp, 0
 
 	mov rdi, hello_school
 	call printf
 
-	add rsp, 8
+	add rsp, 0
 	ret
