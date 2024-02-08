@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * get_but - get the current state of the function.
+ * get_bit - get the current state of the function.
  * @n: the number of arguments.
  * @index: the index of the function.
  * Return: the current state of the function.
