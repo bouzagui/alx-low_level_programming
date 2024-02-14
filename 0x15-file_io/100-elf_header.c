@@ -223,6 +223,7 @@ int main(int argc, char *argv[])
     Elf64_Ehdr *header;
     int o, r;
 
+    (void)argc;
     o = open(argv[1], O_RDONLY);
     if (o == -1)
     {
@@ -249,4 +250,6 @@ int main(int argc, char *argv[])
 
     check_elf(header->e_ident);
     printf("ELF Header:\n");
+    return (0);
 }
+
